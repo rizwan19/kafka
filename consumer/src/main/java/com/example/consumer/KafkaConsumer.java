@@ -1,13 +1,13 @@
 package com.example.consumer;
 
-import org.apache.kafka.clients.consumer.ConsumerRecord;
+import com.example.consumer.model.RiderLocation;
 import org.springframework.kafka.annotation.KafkaListener;
 import org.springframework.stereotype.Component;
 
 @Component
 public class KafkaConsumer {
     @KafkaListener(topics = "my-topic", groupId = "my-group")
-    public void listen(String message) {
-        System.out.println("Received: " + message);
+    public void listen(RiderLocation riderLocation) {
+        System.out.println("Received: " + riderLocation);
     }
 }

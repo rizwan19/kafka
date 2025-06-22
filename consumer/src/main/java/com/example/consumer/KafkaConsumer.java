@@ -6,8 +6,8 @@ import org.springframework.stereotype.Component;
 
 @Component
 public class KafkaConsumer {
-    @KafkaListener(topics = "my-topic", groupId = "my-group")
-    public void listen(RiderLocation riderLocation) {
-        System.out.println("Received: " + riderLocation);
-    }
+//    @KafkaListener(topics = "my-topic", groupId = "my-group")
+//    public void listen(RiderLocation riderLocation) {
+//        System.out.println("Received: " + riderLocation);
+//    }
 }
